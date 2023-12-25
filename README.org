@@ -1,0 +1,31 @@
+* SRFI-14: Character-set Library
+
+** Description
+  The srfi14 library is an implementation of [[https://srfi.schemers.org/srfi-14/srfi-14.html][SRFI 14]] for Bigloo
+  scheme. It is an adaption of the sample implentation.
+
+  Both the native and jvm backends are supported. The test suite is
+  based on [[https://github.com/donaldsonjw/srfi64][SRFI 64]] and needs to be installed before running.
+  
+** Building
+  Both the bigloo native and jvm backends are supported. To build,
+  execute:
+    #+begin_src shell
+  ./configure --prefix=<installation path prefix>; make
+#+end_src
+  where =<installation path prefix>= is the desired installation path
+  prefix (e.g, =/usr/local=). You usually want the path prefix to match
+  that used by Bigloo itself.
+  
+** Installation
+  To install the library, execute:
+#+begin_src shell
+  make install
+#+end_src 
+
+** Tests
+To run the tests execute:
+
+  #+begin_src shell
+  make test
+#+end_src
